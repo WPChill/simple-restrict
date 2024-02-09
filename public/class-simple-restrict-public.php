@@ -224,17 +224,13 @@ class Simple_Restrict_Public {
 		}
 
 		// We must prefix 'simple-restrict' to all the user metas (to not conflict with WordPress existing metas)
-		$current_page_permissions          = array();  // Page permissions are user-defined, so we prefix them manually in next array
-		$current_page_permissions_prefixed = array();  // This array will prefix each of the page permissions
-		$postID                            = $post->ID;
+		$current_page_permissions = array();  // Page permissions are user-defined, so we prefix them manually in next array
+		$postID                   = $post->ID;
 		// Create an array of the current page's permissions
 		$page_terms_list = wp_get_post_terms( $postID, 'simple-restrict-permission', array( 'fields' => 'all' ) );
 		foreach ( $page_terms_list as $current_term ) {
 			if ( ! in_array( $current_term->slug, $current_page_permissions, true ) ) {
-				$current_term_slug          = $current_term->slug;
-				$current_term_slug_prefixed = 'simple-restrict-' . $current_term_slug;
 				array_push( $current_page_permissions, $current_term->slug );
-				array_push( $current_page_permissions_prefixed, $current_term_slug_prefixed );
 			}
 		}
 
@@ -243,15 +239,17 @@ class Simple_Restrict_Public {
 			return $response;
 			// Otherwise check the user to see if it's permissions match the page's permissions
 		} else {
+			// Check if the user has the required permissions.
+			if ( current_user_can( 'edit_posts' ) ) {
+				return $response;
+			}
+
 			// Send a 403 error if the content is restricted.
 			//@todo: What can be done here is to check the request for the user's permissions and then send a 403 error if the user doesn't have the required permissions.
 			// @todo: else return the content
 			wp_send_json_error( __( 'Sorry, this content is restricted', 'simple-restrict' ), 403 );
-			/*$response_data                        = $response->get_data();
-			$response_data['content']['rendered'] = __( 'Sorry, this content is restricted', 'simple-restrict' );
-			$response_data['excerpt']['rendered']  = __( 'Sorry, this content is restricted', 'simple-restrict' );
-			$response->set_data( $response_data );
-			return $response;*/
+
+			return $response;
 		}
 	}
 }
