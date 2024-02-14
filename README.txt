@@ -1,22 +1,15 @@
 === Simple Restrict ===
-Contributors: awakensolutions
+Contributors: wpchill, awakensolutions
 Tags: adopt-me, restrict, hide, permission, authorization, restrict pages, hide pages, restrict content, hide content, user permission, page permission, user permissions, page
-Donate link: https://www.awakensolutions.com/donation
 Requires at least: 3.4
-Tested up to: 5.2.2
-Stable tag: 1.2.6
+Tested up to: 6.4
+Stable tag: 1.2.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Restrict pages based on permissions assigned to pages and granted in user profiles.
 
 == Description ==
-
-== Security Risk - Seeking Adoption ==
-
-Do not use this plugin until a new version is released. The team at WordFence has advised me of a security risk with this plugin. I am no longer in a position to develop or update this plugin. I am therefore putting this plugin up for adoption as described [here](https://artiss.blog/2023/11/wordpress-plugin-readme-tags-what-you-need-to-know/). If nobody expresses interest in taking over this plugin within the next 30 days I will be removing it from the WordPress plugin repository.
-
---
 
 This plugin allows you to easily mark certain pages with "Permissions" and only users with those permissions will be allowed to see the contents of the page.
 
@@ -142,3 +135,6 @@ This plugin was released in English and French, and anyone can add additional tr
 
 = 1.2.6 =
 * Adds 'Security Risk - Seeking Adoption' message and adds 'adopt-me' tag. Do not use this plugin until a new version is released. The team at WordFence has advised me of a security risk with this plugin. I am no longer in a position to develop or update this plugin. I am therefore putting this plugin up for adoption as described [here](https://artiss.blog/2023/11/wordpress-plugin-readme-tags-what-you-need-to-know/). If nobody expresses interest in taking over this plugin within the next 30 days I will be removing it from the WordPress plugin repository.
+
+= 1.2.7 - 14.02.2024 =
+Fixed: Security issue

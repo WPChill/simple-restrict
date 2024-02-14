@@ -8,20 +8,20 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              http://www.awakensolutions.com
+ * @link              https://wpchill.com
  * @since             1.0.0
  * @package           Simple_Restrict
  *
  * @wordpress-plugin
  * Plugin Name:       Simple Restrict
- * Plugin URI:        http://www.awakensolutions.com/simple-restrict/
  * Description:       Restrict pages based on permissions assigned to pages and granted in user profiles.
- * Version:           1.2.6
- * Author:            Awaken Solutions Inc.
- * Author URI:        http://www.awakensolutions.com
+ * Version:           1.2.7
+ * Author:            WPChill
+ * Author URI:        https://wpchill.com
  * License:           GPLv2 or later
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       simple-restrict
+ * Tested up to:      6.4
  * Domain Path:       /languages
  */
 
