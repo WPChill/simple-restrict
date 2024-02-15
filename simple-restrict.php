@@ -23,6 +23,12 @@
  * Text Domain:       simple-restrict
  * Tested up to:      6.4
  * Domain Path:       /languages
+ *
+ *
+ *  Original Plugin URI:    http://www.awakensolutions.com/simple-restrict/
+ *  Original Author URI:    http://www.awakensolutions.com
+ *  Original Author:        Awaken Solutions Inc.
+ *  Awaken Solutions Inc. has transferred ownership to WPChill on: 10th of February, 2024.
  */
 
 // If this file is called directly, abort.
