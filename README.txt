@@ -1,6 +1,6 @@
 === Simple Restrict ===
 Contributors: wpchill, awakensolutions
-Tags: adopt-me, restrict, hide, permission, authorization, restrict pages, hide pages, restrict content, hide content, user permission, page permission, user permissions, page
+Tags: restrict, hide, permission, authorization, restrict pages, hide pages, restrict content, hide content, user permission, page permission, user permissions, page
 Requires at least: 3.4
 Tested up to: 6.4
 Stable tag: 1.2.7
