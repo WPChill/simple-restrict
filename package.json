@@ -1,0 +1,27 @@
+{
+  "name": "simple-restrict",
+  "title": "Simple Restrict",
+  "version": "1.2.8",
+  "homepage": "https://wpchill.com",
+  "main": "Gruntfile.js",
+  "devDependencies": {
+    "@floatwork/grunt-po2mo": "^0.3.0",
+    "@wordpress/scripts": "^26.19.0",
+    "cypress": "^10.3.0",
+    "grunt": "^1.5.3",
+    "grunt-checktextdomain": "^1.0.1",
+    "grunt-contrib-clean": "^2.0.1",
+    "grunt-contrib-compress": "^2.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-wp-i18n": "^1.0.3",
+    "load-grunt-tasks": "^5.1.0"
+  },
+  "engines": {
+    "node": ">=0.8.0",
+    "npm": ">=1.1.0"
+  },
+  "scripts": {
+  },
+  "dependencies": {
+  }
+}

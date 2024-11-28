@@ -201,7 +201,7 @@ class Simple_Restrict {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 		$this->loader->add_filter( 'rest_prepare_page', $plugin_public, 'rest_restrict', 30, 3 );
-		$this->loader->add_action( 'pre_get_posts', $plugin_public, 'posts_args_search', 30, 1 );
+		$this->loader->add_action( 'pre_get_posts', $plugin_public, 'posts_args_search', 90, 1 );
 	}
 
 	/**

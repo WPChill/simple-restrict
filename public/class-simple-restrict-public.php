@@ -316,18 +316,22 @@ class Simple_Restrict_Public {
 	 */
 	public function posts_args_search( $query ) {
 
-		// Check if it's a pages query.
-		$post_type_query = $query->get( 'post_type' );
-		if ( is_array( $post_type_query ) && ! in_array( 'page', $post_type_query, true ) ) {
+		if ( ! $query->is_search ) {
 			return;
 		}
+		// Check if it's a pages query.
+		$post_type_query = $query->get( 'post_type' );
+		if ( '' !== $post_type_query && ( ( is_array( $post_type_query ) && ! in_array( 'page', $post_type_query, true ) ) || ( is_string( $post_type_query ) && 'page' !== $post_type_query ) ) ) {
+			return;
+		}
+
 		// Check if it's a search query or a REST request.
-		if ( ( $query->is_search && ! is_admin() && ! $query->is_main_query() ) || ( defined( 'REST_REQUEST' ) && REST_REQUEST && isset( $query->query_vars['s'] ) ) ) {
+		if ( ( ! is_admin() ) || ( defined( 'REST_REQUEST' ) && REST_REQUEST && isset( $query->query_vars['s'] ) ) ) {
 			// Remove the filter to avoid infinite loop.
-			remove_filter( 'pre_get_posts', array( $this, 'posts_args_search' ), 30 );
+			remove_filter( 'pre_get_posts', array( $this, 'posts_args_search' ), 90 );
 			$excluded_post_ids = $this->get_all_restricted_pages();
 			// Add the filter back, as the request for the restricted pages is done.
-			add_filter( 'pre_get_posts', array( $this, 'posts_args_search' ), 30, 1 );
+			add_filter( 'pre_get_posts', array( $this, 'posts_args_search' ), 90, 1 );
 			$query->set( 'post__not_in', $excluded_post_ids );
 
 		}
