@@ -140,4 +140,4 @@ This plugin was released in English and French, and anyone can add additional tr
 Fixed: Security issue
 
 = 1.2.8 - 28.11.2024 =
-Fixed: Security issue
+Fixed: Security issue ( Thanks to Francesco Carlucci )
