@@ -43,7 +43,7 @@ jobs:
         env:
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
           SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
-          SLUG: download-monitor
+          SLUG: simple-restrict
           VERSION: ${{ steps.package-version.outputs.current-version }}
       - name: Get changelog
         id: changelog
