@@ -2,8 +2,8 @@
 Contributors: wpchill, awakensolutions
 Tags: restrict, hide, permission, authorization, restrict pages, hide pages, restrict content, hide content, user permission, page permission, user permissions, page
 Requires at least: 3.4
-Tested up to: 6.6
-Stable tag: 1.2.7
+Tested up to: 6.7
+Stable tag: 1.2.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -137,4 +137,7 @@ This plugin was released in English and French, and anyone can add additional tr
 * Adds 'Security Risk - Seeking Adoption' message and adds 'adopt-me' tag. Do not use this plugin until a new version is released. The team at WordFence has advised me of a security risk with this plugin. I am no longer in a position to develop or update this plugin. I am therefore putting this plugin up for adoption as described [here](https://artiss.blog/2023/11/wordpress-plugin-readme-tags-what-you-need-to-know/). If nobody expresses interest in taking over this plugin within the next 30 days I will be removing it from the WordPress plugin repository.
 
 = 1.2.7 - 14.02.2024 =
+Fixed: Security issue
+
+= 1.2.8 - 28.11.2024 =
 Fixed: Security issue
